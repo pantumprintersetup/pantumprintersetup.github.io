@@ -1,0 +1,365 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Setup Pantum Printer?</title>
+    <meta name="description" content="Complete step-by-step guide to setup your Pantum printer. Learn about unboxing, driver installation, wireless setup, USB connection, and troubleshooting.">
+    <meta name="keywords" content="Pantum printer setup, Pantum wireless setup, install Pantum driver, Pantum WiFi setup, Pantum troubleshooting, Pantum M6500">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background: #f4f7fc;
+            color: #1e2a3a;
+            line-height: 1.7;
+            padding: 0 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 30px auto 45px;
+            background: #ffffff;
+            border-radius: 36px;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.07);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #0b2b44;
+            color: white;
+            padding: 22px 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 5px solid #00a8e8;
+        }
+
+        .brand {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .brand span {
+            color: #00a8e8;
+        }
+
+        .setup-btn {
+            background: #00a8e8;
+            color: #0b2b44;
+            border: none;
+            font-weight: 700;
+            font-size: 18px;
+            padding: 14px 36px;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: 0.2s ease;
+            box-shadow: 0 6px 18px rgba(0, 168, 232, 0.3);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .setup-btn:hover {
+            background: #33bdf5;
+            transform: scale(1.02);
+            box-shadow: 0 10px 24px rgba(0, 168, 232, 0.35);
+        }
+
+        .nav-badge {
+            background: #ecf1f9;
+            padding: 12px 40px;
+            font-size: 14px;
+            color: #1d3247;
+            border-bottom: 1px solid #d5dfec;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .nav-badge a {
+            color: #0b2b44;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .nav-badge a:hover {
+            color: #00a8e8;
+        }
+
+        .content {
+            padding: 40px 48px 55px;
+        }
+
+        h1 {
+            font-size: 38px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #0b2b44;
+            letter-spacing: -0.3px;
+            border-left: 8px solid #00a8e8;
+            padding-left: 24px;
+        }
+
+        h2 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-top: 48px;
+            margin-bottom: 18px;
+            color: #0b2b44;
+            border-bottom: 3px solid #eef3fc;
+            padding-bottom: 12px;
+        }
+
+        h3 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-top: 32px;
+            margin-bottom: 14px;
+            color: #1c4a6b;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 17px;
+            color: #1e2f43;
+        }
+
+        ul, ol {
+            margin: 20px 0 30px 30px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            font-size: 17px;
+        }
+
+        .highlight-box {
+            background: #e8f6fc;
+            border-radius: 24px;
+            padding: 28px 32px;
+            margin: 32px 0;
+            border-left: 6px solid #00a8e8;
+        }
+
+        .step-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            background: #fafcff;
+            padding: 16px 24px;
+            border-radius: 24px;
+            margin: 20px 0 30px;
+            border: 1px solid #dee8f5;
+        }
+
+        .step-item {
+            display: flex;
+            gap: 18px;
+            align-items: baseline;
+            padding: 10px 4px;
+            border-bottom: 1px dashed #d2deed;
+        }
+
+        .step-item:last-child {
+            border-bottom: 0;
+        }
+
+        .step-num {
+            background: #0b2b44;
+            color: white;
+            font-weight: 700;
+            width: 34px;
+            height: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 40px;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        .tip-card {
+            background: #f5f7fb;
+            border-radius: 20px;
+            padding: 20px 28px;
+            margin: 24px 0;
+            border-left: 5px solid #00a8e8;
+        }
+
+        .tip-card h4 {
+            font-size: 20px;
+            margin-bottom: 6px;
+            color: #0077a3;
+        }
+
+        .footer-note {
+            margin-top: 50px;
+            padding-top: 28px;
+            border-top: 2px solid #e3ebf7;
+            text-align: center;
+            color: #45637c;
+            font-size: 15px;
+        }
+
+        @media (max-width: 700px) {
+            .header {
+                flex-direction: column;
+                gap: 18px;
+                align-items: stretch;
+                text-align: center;
+                padding: 24px 20px;
+            }
+            .setup-btn {
+                text-align: center;
+            }
+            .content {
+                padding: 30px 20px;
+            }
+            h1 {
+                font-size: 30px;
+                padding-left: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- HEADER with Setup Now button -->
+    <header class="header">
+        <div class="brand">
+            🖨️ <span>Pantum</span> Printer
+        </div>
+        <a href="https://setupprinter.net/" class="setup-btn" role="button">SETUP NOW</a>
+    </header>
+
+    <!-- simple nav -->
+    
+
+    <!-- MAIN ARTICLE -->
+    <div class="content">
+        <h1>How to Setup Pantum Printer? <br><span style="font-size: 22px; font-weight: 400; color: #3f5a78;">Complete guide – unboxing, drivers, wireless, USB &amp; troubleshooting</span></h1>
+
+        <!-- INTRO -->
+        <h2>Setting Up Your Pantum Printer – What You Need to Know</h2>
+        <p>Pantum Printer is a rapidly growing brand in the printing industry, known for offering reliable, affordable laser printers and multifunction devices. Whether you've purchased a compact monochrome model like the P2200 series or a versatile all‑in‑one like the M6500 or M7100 series, setting up your Pantum printer correctly is essential for optimal performance, print quality, and network connectivity.</p>
+        <p>This comprehensive guide will walk you through every stage of the setup process – from unboxing and hardware preparation to driver installation and network configuration. We'll cover USB, Wi‑Fi, and Wi‑Fi Direct connection methods, along with troubleshooting tips for common issues. By the end, you'll be printing confidently.</p>
+
+        <!-- FEATURES & BENEFITS -->
+        <h2>Key Features &amp; Benefits of Pantum Printers</h2>
+        <p>Pantum printers offer a compelling mix of performance, value, and user‑friendly features. Here are some standout benefits:</p>
+        <ul>
+            <li><strong>🖨️ High‑Speed Laser Printing:</strong> Pantum printers deliver fast print speeds, making them ideal for home offices and small businesses.</li>
+            <li><strong>📱 Wireless &amp; Mobile Printing:</strong> Many models support Wi‑Fi, Wi‑Fi Direct, and mobile printing via the Pantum app, allowing you to print from smartphones and tablets.</li>
+            <li><strong>💡 Wi‑Fi Direct Connectivity:</strong> Select models can create their own Wi‑Fi hotspot (e.g., "Pantum_XXXX"), enabling direct printing without a router .</li>
+            <li><strong>🔌 Easy USB Connection:</strong> Plug‑and‑play USB setup for quick, reliable connectivity.</li>
+            <li><strong>📄 Versatile Paper Handling:</strong> Support for various paper sizes and types, including envelopes and labels.</li>
+            <li><strong>🖥️ Multi‑Platform Support:</strong> Compatible with Windows, macOS, and Linux (including Ubuntu and Astra Linux) .</li>
+            <li><strong>🔒 Secure &amp; Reliable:</strong> Built‑in security features and robust build quality ensure long‑term performance.</li>
+        </ul>
+        <div class="highlight-box">
+            <strong>✨ Benefit highlight:</strong> Wi‑Fi Direct is a game‑changer for environments without a network – you can connect your computer or phone directly to the printer's hotspot for instant printing .
+        </div>
+
+        <!-- STEP-BY-STEP SETUP -->
+        <h2>Step‑by‑Step Setup Guide</h2>
+        <p>Follow these detailed steps to set up your Pantum printer. Choose the connection method that suits your setup.</p>
+
+        <h3>Step 1: Unbox and Hardware Preparation</h3>
+        <div class="step-grid">
+            <div class="step-item"><span class="step-num">1</span> <span><strong>Unbox and inspect</strong> – Remove the printer from the box and take off all protective tapes, foam, and shipping materials. Check that all accessories (power cord, USB cable, setup guide, and toner cartridge) are present .</span></div>
+            <div class="step-item"><span class="step-num">2</span> <span><strong>Install the toner cartridge</strong> – Open the front cover. Gently shake the toner cartridge left and right 5–6 times to distribute the toner evenly. Insert it into the printer until it clicks into place .</span></div>
+            <div class="step-item"><span class="step-num">3</span> <span><strong>Load paper</strong> – Pull out the paper tray, adjust the paper guides to match your paper size, and load a stack of plain paper. Make sure the paper is not curled. Insert the tray back into the printer.</span></div>
+            <div class="step-item"><span class="step-num">4</span> <span><strong>Connect power and turn on</strong> – Plug the power cord into the printer and a wall outlet. Press the power button to turn on the printer. Wait for the initialization process to complete – the display or status lights will indicate readiness.</span></div>
+        </div>
+
+        <h3>Option 1: USB Setup (Simplest)</h3>
+        <div class="step-grid">
+            <div class="step-item"><span class="step-num">5</span> <span><strong>Connect via USB</strong> – Connect the printer to your computer using the USB cable. Your operating system will usually detect the printer automatically .</span></div>
+            <div class="step-item"><span class="step-num">6</span> <span><strong>Install driver</strong> – If the driver doesn't install automatically, visit the Pantum support website, download the driver for your model and operating system, and run the installer .</span></div>
+            <div class="step-item"><span class="step-num">7</span> <span><strong>Print a test page</strong> – Once the driver is installed, print a test page to confirm everything is working correctly.</span></div>
+        </div>
+
+        <h3>Option 2: Wireless (Wi‑Fi) Setup</h3>
+        <div class="step-grid">
+            <div class="step-item"><span class="step-num">8</span> <span><strong>Prepare the printer</strong> – Ensure the printer is turned on and placed close to your Wi‑Fi router during setup.</span></div>
+            <div class="step-item"><span class="step-num">9</span> <span><strong>Connect via USB temporarily (for configuration)</strong> – For many Pantum models, you need to connect the printer to your computer via USB to configure the Wi‑Fi settings. The driver installer will guide you through this .</span></div>
+            <div class="step-item"><span class="step-num">10</span> <span><strong>Run the driver installer</strong> – Download and run the Pantum driver installer from the support site. During installation, select "Wireless" or "Wi‑Fi" connection. Follow the on‑screen prompts to select your network and enter the password .</span></div>
+            <div class="step-item"><span class="step-num">11</span> <span><strong>Complete installation</strong> – Once the Wi‑Fi configuration is complete, you can disconnect the USB cable. The printer will now be available on your network. Print a test page to verify .</span></div>
+        </div>
+
+        <h3>Option 3: Wi‑Fi Direct Setup (No Router Needed)</h3>
+        <p>Some Pantum models (like P2200, M6200W, M6202W) support Wi‑Fi Direct, allowing you to connect directly to the printer's hotspot .</p>
+        <div class="step-grid">
+            <div class="step-item"><span class="step-num">12</span> <span><strong>Enable Wi‑Fi Direct</strong> – On the printer's control panel, navigate to the network or wireless settings menu and enable "Wi‑Fi Direct" or "Hotspot" mode .</span></div>
+            <div class="step-item"><span class="step-num">13</span> <span><strong>Connect your device</strong> – On your computer or smartphone, search for available Wi‑Fi networks. You should see a network name starting with "Pantum_XXXX" . Connect to it. The default password is usually printed on the printer's label or is "000000" .</span></div>
+            <div class="step-item"><span class="step-num">14</span> <span><strong>Install the driver or use the app</strong> – For Windows, run the Pantum driver installer and select the Wi‑Fi Direct connection. For mobile, use the Pantum app – it will automatically detect the printer .</span></div>
+            <div class="step-item"><span class="step-num">15</span> <span><strong>Start printing</strong> – Once connected, you can send print jobs directly to the printer without a router .</span></div>
+        </div>
+
+        <p>For Huawei HarmonyOS users, Pantum printers can also be added through the system's printer settings – the driver app will guide you through the process .</p>
+
+        <!-- TROUBLESHOOTING -->
+        <h2>Troubleshooting – Common Setup Issues &amp; Solutions</h2>
+        <p>Even with careful steps, you might encounter challenges. Here are the most frequent setup problems and how to resolve them.</p>
+
+        <div class="tip-card">
+            <h4>📶 Wi‑Fi connection fails</h4>
+            <p>Ensure your router is broadcasting a 2.4 GHz signal (most Pantum printers support 2.4 GHz). Place the printer closer to the router during setup. Restart both the printer and the router. If you're using the USB‑based configuration, make sure the USB cable is securely connected .</p>
+        </div>
+
+        <div class="tip-card">
+            <h4>🔑 Forgotten Wi‑Fi Direct password</h4>
+            <p>The default password is often "000000" or printed on the printer's label. If you've changed it and forgotten, you can reset the printer to factory defaults by turning it off, then pressing and holding the "Cancel/Continue" button while turning it on. Hold for about 5 seconds until it enters standby mode .</p>
+        </div>
+
+        <div class="tip-card">
+            <h4>🖥️ Driver not found or installation fails</h4>
+            <p>Visit the official Pantum support website and download the correct driver for your exact model and operating system. For Linux users (Ubuntu, Astra Linux), you may need to install CUPS and use the .deb package .</p>
+        </div>
+
+        <div class="tip-card">
+            <h4>🖨️ Printer not detected on network</h4>
+            <p>Print a network configuration page from the printer's menu to check its IP address. Ensure your computer is on the same network segment. You can also try manually adding the printer by its IP address in the printer settings .</p>
+        </div>
+
+        <div class="tip-card">
+            <h4>📄 Blank pages or poor print quality</h4>
+            <p>Remove the toner cartridge and gently shake it to redistribute the toner. Check that the protective tape has been completely removed from the cartridge. Also, ensure you're using the correct paper type setting in the driver.</p>
+        </div>
+
+        <div class="highlight-box">
+            <strong>🛠️ Pro tip:</strong> Always download drivers directly from the official Pantum support website. For Linux, you may need to use the terminal commands for installation – refer to the detailed guides available on the support page .
+        </div>
+
+        <!-- CONCLUSION -->
+        <h2>Conclusion – Setup and Start Printing</h2>
+        <p>Setting up your Pantum printer is a straightforward process when you follow the right steps. Whether you choose a simple USB connection for reliability, a wireless setup for convenience, or Wi‑Fi Direct for direct printing without a router, Pantum offers flexible options to suit your needs .</p>
+        <p>By following this guide, you've learned how to physically prepare the printer, install the toner, connect to your network, and troubleshoot common issues. Regular maintenance – such as keeping the printer clean and updating drivers – will ensure long‑term performance.</p>
+        <p>We hope this comprehensive setup guide has been helpful. If you encounter issues not covered here, Pantum's official support resources are just a click away. Now, load some paper, send your first print job, and experience the quality and value that Pantum is known for.</p>
+
+        <!-- call to action -->
+        <div style="background: #e0f3fa; border-radius: 80px; padding: 18px 28px; margin: 40px 0 20px; text-align: center; border: 1px solid #99d6f0;">
+            <span style="font-weight: 600; font-size: 18px;">🚀 Ready to set up your Pantum printer?</span>
+            <a href="https://setupprinter.net/" style="display: inline-block; margin-left: 18px; background: #0b2b44; color: white; padding: 12px 34px; border-radius: 60px; text-decoration: none; font-weight: 600;">SETUP NOW</a>
+        </div>
+
+        <div class="footer-note">
+            <p>© 2026 Pantum Setup Guide · This is an independent informational article. All trademarks belong to their respective owners.</p>
+            <p style="margin-top: 6px; font-size: 14px;">No support numbers or external URLs used. For official help, visit the Pantum Support website.</p>
+        </div>
+    </div>
+    <!-- end content -->
+</div>
+<!-- end container -->
+</body>
+</html>
+```
